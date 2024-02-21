@@ -162,6 +162,24 @@ repeating layout elements
 section specific 
 */
 
+/* about section */
+
+.text-column h2 {
+    padding-bottom: 16px;
+}
+
+.text-column h3 {
+    padding-bottom: 8px;
+}
+
+.resume {
+    padding-top: 8px;
+}
+
+.resume hr {
+    border-top: 1px solid var(--primary-color);
+}
+
 /* zeug section */
 
 .gallery-container {
