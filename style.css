@@ -68,6 +68,12 @@ body {
     font-size: 20px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+}
+
 /* typography */
 
 h1, h2, h3 {
@@ -100,7 +106,7 @@ p {
 }
 
 .small-text {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     color: var(--bg-color);
 }
 
@@ -110,7 +116,9 @@ p {
 }
 
 a {
+    font-family: futura-pt, sans-serif;
     color: var(--link-color);
+    text-decoration: none;
 }
 
 .btn-text {
@@ -126,7 +134,14 @@ repeating layout elements
 .section-container {
     border-radius: 32px;
     padding: 64px;
-    margin-bottom: 128px;
+}
+
+.section-intro {
+    padding-bottom: 64px;
+}
+
+.section-intro h2 {
+    padding-bottom: 24px;
 }
 
 .image-container {
@@ -142,10 +157,11 @@ repeating layout elements
     bottom: 8px;
     right: 8px;
     padding: 8px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
     font-weight: bold;
   }
+
+/* modals */
 
 /* flex grid system */
 
@@ -153,6 +169,7 @@ repeating layout elements
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 16px;
     width: 100%;
   }
 
@@ -164,6 +181,7 @@ repeating layout elements
     display: flex;
     flex-direction: column;
     flex: 1;
+    gap: 16px;
   }
 
 /* 
@@ -192,35 +210,91 @@ section specific
 
 .portfolio .subtitle {
     color: var(--bg-color);
+    margin-top: -8px;
+}
+
+.portfolio .row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .portfolio .image-container {
+    background-color: var(--secondary-color);
     height: 256px;
+}
+
+.portfolio .gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 /* about section */
 
-.text-column h2 {
-    padding-bottom: 32px;
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 }
 
-.text-column h3 {
-    padding-bottom: 24px;
+.about .row {
+    gap: 32px;
+}
+
+.text-column {
+    display: flex;
+    gap: 24px;
+}
+
+.image-column {
+    align-items: center;
+}
+
+.image-column .image-container {
+    max-width: 320px;
 }
 
 .resume {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     padding-top: 8px;
+    max-width: 64ch;
+}
+
+.resume-row {
+    gap: 8px;
+}
+
+.resume-right {
+    text-align: right;
 }
 
 .resume hr {
     border-top: 1px solid var(--primary-color);
+    margin: 0;
+}
+
+.resume .small-text {
+    color: var(--secondary-color);
 }
 
 /* zeug section */
 
-.gallery-container {
+.zeug .gallery-container {
     display: flex;
+    flex-direction: column;
+    gap: 16px;
     width: 100%; /* Takes full width of container */
+}
+
+.zeug .gallery-container .row, .zeug .gallery-container .column{
+    gap: 16px;
+}
+
+.zeug .gallery-container {
+
 }
 
 .zeug .row {
@@ -230,6 +304,10 @@ section specific
 /* contact section */
 
 .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
     background-color: var(--secondary-color);
 }
 
@@ -237,6 +315,22 @@ section specific
     font-size: 4rem;
 }
 
+.contact p {
+    color: var(--bg-color);
+    max-width: 100%;
+}
+
 .contact-btn {
 
+}
+
+/* footer */
+
+footer {
+
+}
+
+footer p {
+    text-align: center;
+    max-width: 100%;
 }
