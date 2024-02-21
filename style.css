@@ -65,6 +65,7 @@ global styles
 body {
     background: var(--bg-color);
     padding: 32px;
+    font-size: 20px;
 }
 
 /* typography */
@@ -76,15 +77,15 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 121.5px;
+    font-size: 7.59375rem;
 }
 
 h2 {
-    font-size: 54px;
+    font-size: 5.0625rem;
 }
 
 h3 {
-    font-size: 36px;
+    font-size: 3.375rem;
 }
 
 p, .small-text, .subtitle {
@@ -93,17 +94,18 @@ p, .small-text, .subtitle {
 }
 
 p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
+    max-width: 64ch;
 }
 
 .small-text {
-    font-size: 12.8px;
+    font-size: 0.5rem;
     color: var(--bg-color);
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -112,7 +114,7 @@ a {
 }
 
 .btn-text {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 900;
     color: var(--link-color);
 }
@@ -128,6 +130,7 @@ repeating layout elements
 }
 
 .image-container {
+    background-color: var(--primary-color);
     position: relative; /* Allows positioning of overlay */
     border-radius: 16px;
     width: 100%;
@@ -198,11 +201,11 @@ section specific
 /* about section */
 
 .text-column h2 {
-    padding-bottom: 16px;
+    padding-bottom: 32px;
 }
 
 .text-column h3 {
-    padding-bottom: 8px;
+    padding-bottom: 24px;
 }
 
 .resume {
@@ -231,7 +234,7 @@ section specific
 }
 
 .contact-h2 {
-    font-size: 81px;
+    font-size: 4rem;
 }
 
 .contact-btn {
