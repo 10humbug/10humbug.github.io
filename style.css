@@ -64,14 +64,16 @@ global styles
 
 body {
     background: var(--bg-color);
-    padding: 32px;
+    padding: 16px;
     font-size: 20px;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 128px;
+    gap: 64px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* typography */
@@ -132,6 +134,11 @@ a {
     color: var(--link-color);
 }
 
+strong {
+    color: #F2506E;
+    font-weight: 700;
+}
+
 /* 
 repeating layout elements 
 */
@@ -150,11 +157,21 @@ repeating layout elements
 }
 
 .image-container {
-    background-color: var(--primary-color);
     position: relative; /* Allows positioning of overlay */
     border-radius: 16px;
     width: 100%;
     height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--primary-color);
+}
+
+.about-img-1 {
+    background-image: url(/assets/about-1.png);
+}
+
+.about-img-2 {
+    background-image: url(/assets/about-2.png);
 }
 
 .open-image-btn {
@@ -167,6 +184,8 @@ repeating layout elements
   }
 
 /* modals */
+
+/* icons */
 
 /* flex grid system */
 
@@ -196,7 +215,20 @@ section specific
 /* hero section */
 
 .hero {
+    height: 50vh;
+    background-image: url("assets/hero-image.jpg");
+    background-position: center;
+    background-size: contain;
     background-color: var(--secondary-color);
+}
+
+.hero-overlay {
+    align-items: flex-end;
+    height: 100%;
+}
+
+.hero h1 {
+    text-align: right;
 }
 
 /* portfolio section */
