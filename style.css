@@ -7,6 +7,7 @@ variables
     --secondary-color: #00012B;
     --bg-color: #F2F2F2;
     --link-color: #F1F227;
+    --base-font-size: 20px;
   }
 
 /*
@@ -29,7 +30,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -79,24 +79,26 @@ main {
 h1, h2, h3 {
     font-family: futura-pt, sans-serif;
     font-weight: 800;
+    line-height: 1.2;
     color: var(--primary-color);
 }
 
 h1 {
-    font-size: 7.59375rem;
-}
-
-h2 {
     font-size: 5.0625rem;
 }
 
-h3 {
+h2 {
     font-size: 3.375rem;
+}
+
+h3 {
+    font-size: 2.25rem;
 }
 
 p, .small-text, .subtitle {
     font-family: nimbus-sans, sans-serif;
     color: var(--secondary-color);
+    line-height: 1.5;
 }
 
 p {
@@ -111,8 +113,11 @@ p {
 }
 
 .subtitle {
+    display: block;
     font-size: 1.5rem;
     font-weight: 400;
+    line-height: 1.2;
+    max-width: 64ch;
 }
 
 a {
