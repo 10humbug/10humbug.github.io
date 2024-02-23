@@ -1,17 +1,15 @@
 
 /* 
-mobile variables 
+Typography changes 
 */
-:root {
-}
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
     /* 
     global styles 
     */
 
     body {
-        padding: 16px;
+        padding: 8px;
     }
     
     /* typography */
@@ -37,32 +35,72 @@ mobile variables
     }
     
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 600;
     }
 
     .btn-text {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 
-/* repeating layout elements */
+/*
+Layout changes
+*/
 
-/* modals */
+@media only screen and (max-width: 800px) {
 
-/* icons */
+    /* 
+    global styles 
+    */
 
-/* flex grid system */
+    main {
+        gap: 32px;
+    }
 
-/* section specific */
+    /* repeating sections */
 
-/* hero section */
+    .section-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
-/* portfolio section */
 
-/* about section */
+    /* hero section */
 
-/* zeug section */
+    .hero .hero-overlay {
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 8px;
+    }
 
-/* contact section */
+    .hero .column {
+        width: 100%;
+        flex: 0;
+    }
 
-/* footer */
+    .hero .column .small-text {
+        text-align: left;
+    }
+
+    .column-small {
+        order: 2;
+    }
+
+    /* 
+    about section 
+    */
+
+    .about .row {
+        flex-direction: column;
+    }
+
+    .about .image-column {
+        order: 2;
+    }
+
+
+    .contact {
+        gap: 16px;
+    }
+}
