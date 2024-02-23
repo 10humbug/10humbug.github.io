@@ -5,9 +5,10 @@ variables
 :root {
     --primary-color: #F2506E;
     --secondary-color: #00012B;
-    --bg-color: #F2F2F2;
+    --bg-color: #FFFCE1;
     --link-color: #F1F227;
     --base-font-size: 16px;
+    --text-width: 75ch;
   }
 
 /*
@@ -64,8 +65,7 @@ global styles
 
 body {
     background: var(--bg-color);
-    padding: 16px;
-    font-size: 20px;
+    padding: 32px;
 }
 
 main {
@@ -106,7 +106,7 @@ p, .small-text, .subtitle {
 p {
     font-size: 1rem;
     font-weight: 400;
-    max-width: 64ch;
+    max-width: var(--text-width);
 }
 
 .small-text {
@@ -119,7 +119,7 @@ p {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.2;
-    max-width: 64ch;
+    max-width: var(--text-width);
 }
 
 a {
@@ -167,7 +167,7 @@ repeating layout elements
 }
 
 .about-img-1 {
-    background-image: url(/assets/about-1.png);
+    background-image: url(/assets/about-2.png);
 }
 
 .about-img-2 {
@@ -216,7 +216,7 @@ section specific
 
 .hero {
     height: 50vh;
-    background-image: url("assets/hero-image.jpg");
+    background-image: url("");
     background-position: center;
     background-size: contain;
     background-color: var(--secondary-color);
@@ -265,6 +265,11 @@ section specific
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.port-img-1 {
+    background-image: url("/assets/portfolio-image-1.png");
+    background-position: top;
 }
 
 /* about section */
@@ -333,6 +338,16 @@ section specific
 .zeug .gallery-container {
 
 }
+
+.zeug .image-container {
+
+}
+
+.art-img-1 {
+    background-image: url("assets/art-1.jpg");
+}
+
+
 
 .zeug .row {
     height: 528px;
