@@ -8,9 +8,7 @@ Typography changes
     global styles 
     */
 
-    body {
-        padding: 8px;
-    }
+
     
     /* typography */
     h1 {
@@ -93,6 +91,7 @@ Layout changes
 
     .about .row {
         flex-direction: column;
+        gap: 32px;
     }
 
     .about .image-column {
@@ -102,5 +101,25 @@ Layout changes
 
     .contact {
         gap: 16px;
+    }
+
+    .resume .small-text {
+        text-align: left;
+    }
+
+    /* 
+    zeug
+    */
+
+    .zeug .row {
+        flex-direction: column;
+    }
+
+    .zeug .row .column .inner-row {
+        width: 100%;
+    }
+
+    .zeug .column {
+        flex-direction: row;
     }
 }

@@ -3,13 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio Name</title>
+    <title>10humbug</title>
+    <!-- scripts -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="https://use.typekit.net/ayg0dmx.css">
+    <!-- scripts -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 </head>
 <body>
+    <!-- modals -->
+    <div id="portfolio-modal-1" class="modal" aria-hidden="true">
+        <!-- [2] -->
+        <div class="modal-wrapper" tabindex="-1" data-micromodal-close>
+        <!-- Modal Content -->
+        <div role="dialog" aria-modal="true" aria-labelledby="portfolio-modal-1-title" >
+            <header>
+                <h2 id="portfolio-modal-1-title" class="modal-title">
+                    FERNWE.
+                </h2>
+                <!-- Close Button -->
+                <span class="close-modal-btn" aria-label="Close modal" data-micromodal-close>CLOSE</span>
+            </header>
+    
+            <!-- Modal Content -->
+            <div id="portfolio-modal-1-content" class="modal-content">
+                <span class="subtitle">Low Fidelity Wireframe für eine Website, welche Informationen zur Pflege von Zimmerpflanzen bereitstellt.</span>
+                <div class="row">
+                    <div class="image-container fernwe-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- main content -->
     <main>
+        <!-- hero section -->
         <section class="section-container hero">
             <div class="row hero-overlay">
                 <div class="column column-small">
@@ -21,6 +52,7 @@
             </div>
         </section>
 
+        <!-- about section -->
         <section class="section-container about">
             <div class="row">
                 <div class="column text-column">
@@ -55,7 +87,7 @@
                             <span class="small-text column resume-right">2017 - 2023</span>
                         </div>
                         <div class="row resume-row">
-                            <span class="small-text column">Parlatta, Tätigkeit als Studentische Hilfskraft, Webentwickler</span>
+                            <span class="small-text column">Parlatta, Werkstudent, Webentwickler</span>
                             <span class="small-text column resume-right">Jan. 2021 - Dez. 2023</span>
                         </div>
                         <hr>
@@ -64,14 +96,16 @@
             </div>
         </section>
 
+        <!-- portfolio section -->
         <section class="section-container portfolio">
             <div class="section-intro">
                 <h2>PORTFOLIO</h2>
                 <span class="subtitle">In diesem Abschnitt präsentiere ich dir eine Auswahl meiner besten Arbeiten, die meine Fähigkeiten und mein Gespür für Design widerspiegeln.</span>
             </div>
+            
             <div class="gallery-container">
                 <div class="row">
-                    <div class="image-container port-img-1">
+                    <div class="image-container port-img-1" data-micromodal-trigger="portfolio-modal-1">
                         <span class="open-image-btn">
                             <a href="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -117,6 +151,7 @@
             </div>
         </section>
 
+        <!-- zeug section -->
         <section class="section-container zeug">
             <div class="section-intro">
                 <h2>WAS MACHEN SACHEN?</h2>
@@ -185,17 +220,23 @@
             </div>
         </section>
 
+        <!-- contact section -->
         <section class="section-container contact">
             <h2 class="contact-h">FRAGEN?</h2>
             <p>Melden sie sich bitte bei ihrem Arzt, Apotheker oder am besten bei mir.</p>
             <span class="contact-btn"><a href="mailto:10humbug@gmail.com">10humbug@gmail.com</a></span>
         </section>
-
     </main>
 
+    <!-- footer -->
     <footer class="section-container">
         <p>© 2024 Marius Tenhumberg.</p>
     </footer>
+
+    <!-- scripts -->
+    <script>
+        MicroModal.init();
+    </script>
 
 </body>
 </html>
