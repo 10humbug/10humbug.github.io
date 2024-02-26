@@ -184,7 +184,7 @@ repeating layout elements
 }
 
 .open-image-btn {
-    position: absolute; /* Positions overlay in corner */
+    position: absolute; /* aPositions overlay in corner */
     bottom: 8px;
     right: 8px;
     padding: 8px;
