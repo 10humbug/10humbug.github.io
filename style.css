@@ -7,8 +7,8 @@ variables
     --secondary-color: rgb(0, 1, 43);
     --bg-color: #FFFCE1;
     --link-color: rgb(241, 242, 39);
-    --hero-bg-color: rgba(0, 1, 43, 0.5);
-    --about-bg-color: rgba(241, 242, 39, 0.2);
+    --hero-bg-color: rgba(0, 1, 43, 0.3);
+    --about-bg-color: rgba(241, 242, 39, 0.1);
     --base-font-size: 16px;
     --text-width: 75ch;
 }
@@ -252,7 +252,9 @@ repeating layout elements
 }
 
 .modal iframe {
+    border: 2px solid var(--bg-color) !important;
     border-radius: 16px;
+    width: 100%;
 }
 
 .close-modal-btn {
