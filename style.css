@@ -6,7 +6,7 @@ variables
     --primary-color: #F2506E;
     --secondary-color: rgb(0, 1, 43);
     --bg-color: #FFFCE1;
-    --link-color: rgb(241, 242, 39);
+    --link-color: rgb(39, 242, 56);
     --hero-bg-color: rgba(0, 1, 43, 0.3);
     --about-bg-color: rgba(241, 242, 39, 0.1);
     --base-font-size: 16px;
@@ -200,8 +200,20 @@ repeating layout elements
     background-image: url(/assets/about-2.png);
 }
 
+.img-right {
+        align-items: flex-end;
+}
+
+.img-left {
+    align-items: flex-start;
+}
+
 .open-image-btn {
     position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url(assets/open-img.svg);
+    background-repeat: no-repeat;
     /* aPositions overlay in corner */
     bottom: 8px;
     right: 8px;
@@ -411,12 +423,8 @@ section specific
     gap: 24px;
 }
 
-.image-column {
-    align-items: center;
-}
-
 .image-column .image-container {
-    max-width: 320px;
+    max-width: 400px;
 }
 
 .resume {
