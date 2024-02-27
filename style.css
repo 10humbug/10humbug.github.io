@@ -267,6 +267,7 @@ repeating layout elements
     background-color: var(--link-color);
     color: var(--secondary-color);
     border-radius: 32px;
+    cursor: pointer;
 }
 
 .modal-content {
