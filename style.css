@@ -11,7 +11,7 @@ variables
     --about-bg-color: rgba(241, 242, 39, 0.2);
     --base-font-size: 16px;
     --text-width: 75ch;
-  }
+}
 
 /*
 reset css
@@ -30,39 +30,44 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* 
@@ -163,7 +168,8 @@ repeating layout elements
 }
 
 .image-container {
-    position: relative; /* Allows positioning of overlay */
+    position: relative;
+    /* Allows positioning of overlay */
     border-radius: 16px;
     width: 100%;
     min-height: 250px;
@@ -179,10 +185,12 @@ repeating layout elements
 
 .about .image-container {
     background-color: var(--about-bg-color);
-    background-blend-mode: color-dodge; /* Choose desired blend mode */
+    background-blend-mode: color-dodge;
+    /* Choose desired blend mode */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 .about-img-1 {
     background-image: url(/assets/about-1.png);
@@ -193,18 +201,19 @@ repeating layout elements
 }
 
 .open-image-btn {
-    position: absolute; /* aPositions overlay in corner */
+    position: absolute;
+    /* aPositions overlay in corner */
     bottom: 8px;
     right: 8px;
     padding: 8px;
     color: white;
     font-weight: bold;
-  }
+}
 
-  .open-image-btn a svg {
+.open-image-btn a svg {
     width: 32px;
     height: 32px;
-  }
+}
 
 /* modals */
 
@@ -223,30 +232,30 @@ repeating layout elements
     pointer-events: none;
     padding: 64px;
     overflow-y: auto !important;
-  }
-  
-  .modal.is-open {
+}
+
+.modal.is-open {
     display: flex;
     justify-content: center;
     pointer-events: all;
-  }
+}
 
-  .modal .subtitle {
+.modal .subtitle {
     color: var(--bg-color);
     padding-top: 16px;
-  }
+}
 
-  .modal-wrapper {
+.modal-wrapper {
     width: 100%;
     max-width: 1440px;
     height: fit-content;
-  }
+}
 
-  .modal iframe {
+.modal iframe {
     border-radius: 16px;
-  }
+}
 
-  .close-modal-btn {
+.close-modal-btn {
     font-family: futura-pt, sans-serif;
     font-weight: 600;
     position: fixed;
@@ -256,27 +265,27 @@ repeating layout elements
     background-color: var(--link-color);
     color: var(--secondary-color);
     border-radius: 32px;
-  }
+}
 
-  .modal-content {
+.modal-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 64px;
-  }
+}
 
-  .modal .image-container {
+.modal .image-container {
     min-height: 500px;
     background-position: top;
-  }
+}
 
-  .modal-container {
+.modal-container {
     overflow: auto;
-  }
+}
 
-  .fernwe-1 {
+.fernwe-1 {
     background-image: url(assets/Fernwe-Desktop-Homepage.png);
-  }
+}
 
 
 /* icons */
@@ -289,21 +298,21 @@ repeating layout elements
     flex-wrap: wrap;
     gap: 16px;
     width: 100%;
-  }
+}
 
-  .inner-row {
+.inner-row {
     height: 50%;
-  }
-  
-  .column {
+}
+
+.column {
     display: flex;
     flex-direction: column;
     flex: 1;
     gap: 16px;
-  }
+}
 
 
-  /* modals */
+/* modals */
 
 /* 
 section specific 
@@ -314,11 +323,13 @@ section specific
 .hero {
     height: 75vh;
     background-image: url("assets/hero-1.png");
-    background-blend-mode: color-dodge; /* Choose desired blend mode */
+    background-blend-mode: color-dodge;
+    /* Choose desired blend mode */
     background-color: var(--hero-bg-color);
     background-size: 150%;
     background-position: 100% 40%;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 .hero-overlay {
     align-items: flex-end;
@@ -436,20 +447,17 @@ section specific
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 100%; /* Takes full width of container */
+    width: 100%;
+    /* Takes full width of container */
 }
 
-.zeug .gallery-container .row, .zeug .gallery-container .column{
+.zeug .gallery-container .row, .zeug .gallery-container .column {
     gap: 16px;
 }
 
-.zeug .gallery-container {
+.zeug .gallery-container {}
 
-}
-
-.zeug .image-container {
-
-}
+.zeug .image-container {}
 
 .art-img-1 {
     background-image: url("assets/art-1.jpg");
@@ -480,15 +488,11 @@ section specific
     max-width: 100%;
 }
 
-.contact-btn {
-
-}
+.contact-btn {}
 
 /* footer */
 
-footer {
-
-}
+footer {}
 
 footer p {
     text-align: center;
