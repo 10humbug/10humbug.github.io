@@ -4,9 +4,11 @@ variables
 
 :root {
     --primary-color: #F2506E;
-    --secondary-color: #00012B;
+    --secondary-color: rgb(0, 1, 43);
     --bg-color: #FFFCE1;
-    --link-color: #F1F227;
+    --link-color: rgb(241, 242, 39);
+    --hero-bg-color: rgba(0, 1, 43, 0.5);
+    --about-bg-color: rgba(241, 242, 39, 0.2);
     --base-font-size: 16px;
     --text-width: 75ch;
   }
@@ -175,8 +177,15 @@ repeating layout elements
     cursor: pointer;
 }
 
+.about .image-container {
+    background-color: var(--about-bg-color);
+    background-blend-mode: color-dodge; /* Choose desired blend mode */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+
 .about-img-1 {
-    background-image: url(/assets/about-2.png);
+    background-image: url(/assets/about-1.png);
 }
 
 .about-img-2 {
@@ -192,21 +201,28 @@ repeating layout elements
     font-weight: bold;
   }
 
+  .open-image-btn a svg {
+    width: 32px;
+    height: 32px;
+  }
+
 /* modals */
 
 /* https://micromodal.vercel.app/#usage */
 
 .modal {
     position: fixed;
+    top: 0;
     display: none;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     min-height: 100%;
     background: var(--secondary-color);
     color: var(--bg-color);
     z-index: 2;
     pointer-events: none;
     padding: 64px;
+    overflow-y: auto !important;
   }
   
   .modal.is-open {
@@ -223,13 +239,23 @@ repeating layout elements
   .modal-wrapper {
     width: 100%;
     max-width: 1440px;
+    height: fit-content;
+  }
+
+  .modal iframe {
+    border-radius: 16px;
   }
 
   .close-modal-btn {
-    font-family: nimbus-sans, sans-serif;;
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
     position: fixed;
     top: 64px;
     right: 64px;
+    padding: 8px;
+    background-color: var(--link-color);
+    color: var(--secondary-color);
+    border-radius: 32px;
   }
 
   .modal-content {
@@ -242,6 +268,10 @@ repeating layout elements
   .modal .image-container {
     min-height: 500px;
     background-position: top;
+  }
+
+  .modal-container {
+    overflow: auto;
   }
 
   .fernwe-1 {
@@ -282,12 +312,13 @@ section specific
 /* hero section */
 
 .hero {
-    height: 50vh;
-    background-image: url("");
-    background-position: center;
-    background-size: contain;
-    background-color: var(--secondary-color);
-}
+    height: 75vh;
+    background-image: url("assets/hero-1.png");
+    background-blend-mode: color-dodge; /* Choose desired blend mode */
+    background-color: var(--hero-bg-color);
+    background-size: 150%;
+    background-position: 100% 40%;
+    background-repeat: no-repeat;}
 
 .hero-overlay {
     align-items: flex-end;
@@ -335,7 +366,17 @@ section specific
 }
 
 .port-img-1 {
-    background-image: url("/assets/portfolio-image-1.png");
+    background-image: url("/assets/fernwe-thumbnail.png");
+    background-position: top;
+}
+
+.port-img-2 {
+    background-image: url("/assets/abi-thumbnail.png");
+    background-position: center 35%;
+}
+
+.port-img-3 {
+    background-image: url("/assets/fernwe-thumbnail.png");
     background-position: top;
 }
 

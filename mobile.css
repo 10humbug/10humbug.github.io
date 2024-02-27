@@ -3,7 +3,7 @@
 Typography changes 
 */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     /* 
     global styles 
     */
@@ -66,6 +66,13 @@ Layout changes
 
     /* ahero section */
 
+    .hero {
+        height: 50vh;
+        max-height: 500px;
+        background-size: 270vw;
+        background-position: 80% 40%;
+    }
+
     .hero .hero-overlay {
         flex-direction: column;
         justify-content: flex-end;
@@ -101,6 +108,10 @@ Layout changes
 
     .contact {
         gap: 16px;
+    }
+
+    .resume-row {
+        gap: 0px !important;
     }
 
     .resume .small-text {
