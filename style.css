@@ -176,6 +176,7 @@ repeating layout elements
     height: 100%;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     background-color: var(--primary-color);
 }
 
@@ -355,6 +356,15 @@ section specific
     text-align: right;
 }
 
+.hero .small-text {
+    min-width: 30ch;
+}
+
+.column-small {
+    flex: 0;
+    width: fit-content;
+}
+
 /* portfolio section */
 
 .portfolio {
@@ -468,16 +478,50 @@ section specific
 
 .zeug .gallery-container {}
 
-.zeug .image-container {}
-
-.art-img-1 {
-    background-image: url("assets/art-1.jpg");
+.zeug .image-container {
+    background-size: contain;
 }
 
+.art-img-1 {
+    background-image: url("assets/art-1.png");
+    background-size: contain;
+}
 
+.art-img-2 {
+    background-image: url("assets/art-2.png");
+}
+
+.art-img-3 {
+    background-image: url("assets/art-3.png");
+    background-position: top;
+}
+
+.art-img-4 {
+    background-image: url("assets/art-4.png");
+    background-position: center;
+}
+
+.art-img-5 {
+    background-image: url("assets/art-5.png");
+}
+
+.art-img-6 {
+    background-image: url("assets/art-6.png");
+}
+
+.art-img-7 {
+    background-image: url("assets/art-7.png");
+}
+
+.art-img-8 {
+    background-image: url("assets/art-8.png");
+}
+
+.full-row {
+}
 
 .zeug .row {
-    max-height: 528px;
+    height: 528px;
 }
 
 /* contact section */
