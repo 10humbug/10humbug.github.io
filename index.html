@@ -8,9 +8,11 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="mobile.css">
         <link rel="stylesheet" href="https://use.typekit.net/ayg0dmx.css">
-        <!-- ascripts -->
+        <!-- scripts -->
         <script
-            src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+            src="https://unpkg.com/micromodal/dist/micromodal.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     </head>
     <body>
         <!-- modals -->
@@ -26,14 +28,14 @@
                         </h2>
                         <!-- Close Button -->
                         <span class="close-modal-btn" aria-label="Close modal"
-                            data-micromodal-close>CLOSE</span>
+                            data-micromodal-close></span>
                     </header>
 
                     <!-- Modal Content -->
                     <div id="portfolio-modal-1-content" class="modal-content">
                         <span class="subtitle">Low Fidelity Wireframe für eine
                             Website, welche Informationen zur Pflege von
-                            Zimmerpflanzen bereitstellt.</span>
+                            Zimmerpflanzen bereitstellt. <br><br> Ziel des Designs war es </span>
 
                         <div class="column">
                             <h2>Mobile</h2>
@@ -50,6 +52,34 @@
                                 width="800" height="450"
                                 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F3RKh7TJDZUUfRBrc4D9WSG%2FFernwe.info%3Fpage-id%3D2151%253A937%26type%3Ddesign%26node-id%3D2151-941%26viewport%3D579%252C496%252C0.07%26t%3DEQ9prpoAqrkRQ2VR-1%26scaling%3Dscale-down%26mode%3Ddesign"
                                 allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio-modal-2" class="modal" aria-hidden="true">
+            <!-- [2] -->
+            <div class="modal-wrapper" tabindex="-1" data-micromodal-close>
+                <!-- Modal Content -->
+                <div class="modal-container" role="dialog" aria-modal="true"
+                    aria-labelledby="portfolio-modal-2-title">
+                    <header>
+                        <h2 id="portfolio-modal-2-title" class="modal-title">
+                            FERNWE.
+                        </h2>
+                        <!-- Close Button -->
+                        <span class="close-modal-btn" aria-label="Close modal"
+                            data-micromodal-close></span>
+                    </header>
+
+                    <!-- Modal Content -->
+                    <div id="portfolio-modal-2-content" class="modal-content">
+                        <span class="subtitle">Prototyp einer Webseite einer Praxis für Kardiologie</a></span>
+                        <p>Prototyp einer Website für eine Kardiologische Praxis.</span>
+                        <div class="column">
+                            <h2>Desktop</h2>
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FDf01EaNcEvJ8AulrDotEtm%2FCardiologist-Visual-Update%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-1%26viewport%3D131%252C580%252C0.4%26t%3D1xRlI4W9YZBbXJp8-1%26scaling%3Dscale-down%26mode%3Ddesign" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -92,7 +122,8 @@
                         </p>
                     </div>
                     <div class="column image-column img-right">
-                        <div class="image-container about-img-1">
+                        <div class="image-container2 about-img-1">
+                                <img src="/assets/about-1.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -152,8 +183,8 @@
             <section class="section-container portfolio">
                 <div class="section-intro">
                     <h2>PORTFOLIO</h2>
-                    <span class="subtitle">In diesem Abschnitt präsentiere ich
-                        dir eine Auswahl meiner besten Arbeiten, die meine
+                    <span class="subtitle">Hier präsentiere ich
+                        eine Auswahl meiner besten Arbeiten, die meine
                         Fähigkeiten und mein Gespür für Design
                         widerspiegeln.</span>
                 </div>
@@ -164,15 +195,21 @@
                             data-micromodal-trigger="portfolio-modal-1">
                             <span class="open-image-btn">
                             </span>
-                        </div>
-                        <span class="subtitle"><a href>Lo-Fi Design
-                                Fernwe.</a></span>
-                        <p>Eine Website für einen Kardiologen. Beteiligt war ich
-                            sowohl am Design, als auch an der
-                            Implementierung.</p>
+                        </div> 
+                        <span class="subtitle"><a href>Low Fidelity Prototyp Zimmerpflanzenpflege Webseite</a></span>
+                        <p>Ein Low Fidelity Prototyp des User Interface einer Webseite, die Informationen zur Pflege von Zimmerpflanzen bereitstellt.</p>
                     </div>
                     <div class="row">
-                        <div class="image-container port-img-2">
+                        <div class="image-container port-img-2"
+                            data-micromodal-trigger="portfolio-modal-2">
+                            <span class="open-image-btn">
+                            </span>
+                        </div>
+                        <span class="subtitle"><a href>Website Prototyp für eine Kardiologie Praxis</a></span>
+                        <p>Prototyp einer Website für eine Kardiologische Praxis.</p>
+                    </div>
+                    <div class="row">
+                        <div class="image-container port-img-3">
                             <span class="open-image-btn">
                             </span>
                         </div>
@@ -192,7 +229,7 @@
                     <h2>WAS MACHEN SACHEN?</h2>
                     <span class="subtitle">Eine Auswahl meiner persönlichen
                         Kunstwerke. Darunter nicht nur mit Farbe gemalte Bilder
-                        auf Leinwand, sondern auch digitale Kreationen.</span>
+                        auf Leinwand, sondern auch digitale Bilder.</span>
                 </div>
                 <div class="gallery-container">
                     <div class="row">
@@ -288,10 +325,15 @@
 
         <!-- scripts -->
         <script>
-        MicroModal.init({
-            disableScroll: true,
-        });
-    </script>
+            MicroModal.init({
+                disableScroll: true,
+            });
+        </script>
+
+        <script>
+            var image = document.getElementsByClassName('image-container');
+new         simpleParallax(image);
+        </script>
 
     </body>
 </html>

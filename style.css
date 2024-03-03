@@ -160,16 +160,15 @@ repeating layout elements
 }
 
 .section-intro {
-    padding-bottom: 64px;
+    padding-bottom: 32px;
 }
 
 .section-intro h2 {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 }
 
 .image-container {
     position: relative;
-    /* Allows positioning of overlay */
     border-radius: 16px;
     width: 100%;
     min-height: 250px;
@@ -178,6 +177,23 @@ repeating layout elements
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--primary-color);
+}
+
+.image-container2 {
+    position: relative;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.image-container2 img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
 }
 
 .portfolio .image-container, .zeug .image-container {
@@ -193,8 +209,8 @@ repeating layout elements
     background-repeat: no-repeat;
 }
 
-.about-img-1 {
-    background-image: url(/assets/about-1.png);
+.about-img-1 img{
+    top: -40%;
 }
 
 .about-img-2 {
@@ -216,9 +232,8 @@ repeating layout elements
     background-image: url(assets/open-img.svg);
     background-repeat: no-repeat;
     /* aPositions overlay in corner */
-    bottom: 8px;
-    right: 8px;
-    padding: 8px;
+    bottom: 16px;
+    right: 16px;
     color: white;
     font-weight: bold;
 }
@@ -276,8 +291,11 @@ repeating layout elements
     position: fixed;
     top: 64px;
     right: 64px;
-    padding: 8px;
+    width: 32px;
+    height: 32px;
+    background-image: url(/assets/close-img.svg);
     background-color: var(--link-color);
+    background-repeat: no-repeat;
     color: var(--secondary-color);
     border-radius: 32px;
     cursor: pointer;
@@ -381,7 +399,6 @@ section specific
 
 .portfolio .subtitle {
     color: var(--bg-color);
-    margin-top: -8px;
 }
 
 .portfolio .row {
@@ -392,7 +409,7 @@ section specific
 
 .portfolio .image-container {
     background-color: var(--secondary-color);
-    height: 256px;
+    height: 400px;
 }
 
 .portfolio .gallery-container {
@@ -401,18 +418,22 @@ section specific
     gap: 32px;
 }
 
+.gallery-container .subtitle {
+    font-weight: 600;
+}
+
 .port-img-1 {
     background-image: url("/assets/fernwe-thumbnail.png");
-    background-position: top;
+    background-position: top left;
 }
 
 .port-img-2 {
-    background-image: url("/assets/abi-thumbnail.png");
-    background-position: center 35%;
+    background-image: url("/assets/chevy-thumbnail.png");
+    background-position: top left;
 }
 
 .port-img-3 {
-    background-image: url("/assets/fernwe-thumbnail.png");
+    background-image: url("/assets/abi-thumbnail.png");
     background-position: top;
 }
 
@@ -479,7 +500,7 @@ section specific
 .zeug .gallery-container {}
 
 .zeug .image-container {
-    background-size: contain;
+    background-size: cover;
 }
 
 .art-img-1 {
