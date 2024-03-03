@@ -6,7 +6,8 @@ variables
     --primary-color: #F2506E;
     --secondary-color: rgb(0, 1, 43);
     --bg-color: #FFFCE1;
-    --link-color: rgb(39, 242, 56);
+    --bg-color-secondary:#fffce1ef;
+    --link-color: #52ff1c;
     --hero-bg-color: rgba(0, 1, 43, 0.3);
     --about-bg-color: rgba(241, 242, 39, 0.1);
     --base-font-size: 16px;
@@ -19,6 +20,7 @@ reset css
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -76,6 +78,9 @@ global styles
 
 body {
     background: var(--bg-color);
+    width: 100vw;
+    height: auto;
+    overflow: scroll !important;
 }
 
 main {
@@ -127,7 +132,7 @@ p {
 
 .subtitle {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2;
     max-width: var(--text-width);
@@ -135,7 +140,7 @@ p {
 
 a {
     font-family: futura-pt, sans-serif;
-    color: var(--link-color);
+    color: var(--bg-color);
     text-decoration: none;
 }
 
@@ -160,7 +165,7 @@ repeating layout elements
 }
 
 .section-intro {
-    padding-bottom: 32px;
+    padding-bottom: 64px;
 }
 
 .section-intro h2 {
@@ -177,27 +182,51 @@ repeating layout elements
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--primary-color);
+
+    perspective: 1000px;
 }
 
 .image-container2 {
     position: relative;
-    border-radius: 16px;
     width: 100%;
     height: 100%;
     min-height: 350px;
-    background-color: var(--primary-color);
     overflow: hidden;
+    border-radius: 16px;
 }
 
 .image-container2 img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
+    border-radius: 16px;
     top: 0;
+    left: 0;
+    object-position: center center;
 }
 
-.portfolio .image-container, .zeug .image-container {
+.image-hover img{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+	transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.image-hover:hover .open-image-btn {
+    background-image: url(assets/open-img-hover.svg);
+}
+
+.image-hover:hover img{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.05);
+}
+
+.portfolio .image-container2, .zeug .image-container2 {
     cursor: pointer;
+}
+
+.portfolio .subtitle {
 }
 
 .about .image-container {
@@ -210,11 +239,11 @@ repeating layout elements
 }
 
 .about-img-1 img{
-    top: -40%;
+    object-position: center 40%;
 }
 
-.about-img-2 {
-    background-image: url(/assets/about-2.png);
+.about-img-2 img{
+    object-position: center 15%;
 }
 
 .img-right {
@@ -232,10 +261,13 @@ repeating layout elements
     background-image: url(assets/open-img.svg);
     background-repeat: no-repeat;
     /* aPositions overlay in corner */
-    bottom: 16px;
-    right: 16px;
+    bottom: 32px;
+    right: 32px;
     color: white;
     font-weight: bold;
+
+    -webkit-transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+	transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .open-image-btn a svg {
@@ -250,22 +282,26 @@ repeating layout elements
 .modal {
     position: fixed;
     top: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
     background: var(--secondary-color);
     color: var(--bg-color);
     z-index: 2;
     pointer-events: none;
     padding: 64px;
     overflow-y: auto !important;
+
+    opacity: 0; /* Start with opacity set to 0 */
+    -webkit-transition: opacity .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+	transition: opacity .3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .modal.is-open {
-    display: flex;
-    justify-content: center;
     pointer-events: all;
+    opacity: 1;
 }
 
 .modal .subtitle {
@@ -294,11 +330,17 @@ repeating layout elements
     width: 32px;
     height: 32px;
     background-image: url(/assets/close-img.svg);
-    background-color: var(--link-color);
     background-repeat: no-repeat;
     color: var(--secondary-color);
     border-radius: 32px;
     cursor: pointer;
+
+    -webkit-transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+	transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.close-modal-btn:hover {
+    background-image: url(/assets/close-img-hover.svg);
 }
 
 .modal-content {
@@ -370,6 +412,10 @@ section specific
     height: 100%;
 }
 
+.hero-overlay .column{
+    justify-content: flex-end;
+}
+
 .hero h1 {
     text-align: right;
 }
@@ -390,7 +436,7 @@ section specific
 }
 
 .portfolio p {
-    color: var(--bg-color);
+    color: var(--bg-color-secondary);
 }
 
 .portfolio h2 {
@@ -398,18 +444,22 @@ section specific
 }
 
 .portfolio .subtitle {
-    color: var(--bg-color);
+    color: var(--bg-color-secondary);
 }
 
 .portfolio .row {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 }
 
-.portfolio .image-container {
-    background-color: var(--secondary-color);
+.portfolio .image-container2 {
     height: 400px;
+}
+
+.portfolio .image-container2 img{
+    width: 100%;
+    height: 100%;
 }
 
 .portfolio .gallery-container {
@@ -419,22 +469,20 @@ section specific
 }
 
 .gallery-container .subtitle {
+    color: var(--bg-color-secondary);
     font-weight: 600;
 }
 
-.port-img-1 {
-    background-image: url("/assets/fernwe-thumbnail.png");
-    background-position: top left;
+.port-img-1 img{
+    object-position: top left;
 }
 
-.port-img-2 {
-    background-image: url("/assets/chevy-thumbnail.png");
-    background-position: top left;
-}
+.port-img-2 img{
+    object-position: top left;
+}   
 
-.port-img-3 {
-    background-image: url("/assets/abi-thumbnail.png");
-    background-position: top;
+.port-img-3 img{
+    object-position: center;
 }
 
 /* about section */
@@ -497,52 +545,80 @@ section specific
     gap: 16px;
 }
 
-.zeug .gallery-container {}
-
-.zeug .image-container {
-    background-size: cover;
-}
-
-.art-img-1 {
-    background-image: url("assets/art-1.png");
-    background-size: contain;
-}
-
-.art-img-2 {
-    background-image: url("assets/art-2.png");
-}
-
-.art-img-3 {
-    background-image: url("assets/art-3.png");
-    background-position: top;
-}
-
-.art-img-4 {
-    background-image: url("assets/art-4.png");
-    background-position: center;
-}
-
-.art-img-5 {
-    background-image: url("assets/art-5.png");
-}
-
-.art-img-6 {
-    background-image: url("assets/art-6.png");
-}
-
-.art-img-7 {
-    background-image: url("assets/art-7.png");
-}
-
-.art-img-8 {
-    background-image: url("assets/art-8.png");
-}
-
-.full-row {
+.zeug .gallery-container .column {
+    height: 100%;
 }
 
 .zeug .row {
     height: 528px;
+}
+
+.zeug .full-row {
+    height: 528px;
+}
+
+.zeug .gallery-container {}
+
+.zeug .image-container2 {
+    min-height: auto;
+}
+
+
+.zeug .image-container2 img{
+}
+
+.art-img-1 img{
+
+}
+
+.art-img-2 img{
+
+}
+
+.art-img-3 img{
+
+}
+
+.art-img-4 img{
+
+}
+
+.art-img-5 img{
+
+}
+
+.art-img-6 img{
+ 
+}
+
+.art-img-7 img, .art-img-8 img{
+}
+
+.zeug .full-row .image-container2{
+    max-height: 100%;
+}
+
+.zeug-modal {
+    height: 100%;
+    max-height: 100vh;
+    align-items: center;
+}
+
+.zeug-modal .modal-wrapper {
+    height: 100%;
+}
+
+.zeug-modal .modal-container {
+    height: 100%;
+}
+
+.zeug-modal-content {
+    height: 100%;
+}
+
+.zeug-modal-content img{
+    height: 100%;
+    object-fit: contain;
 }
 
 /* contact section */
@@ -550,9 +626,14 @@ section specific
 .contact {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
     text-align: center;
+    align-items: center;
     background-color: var(--secondary-color);
+}
+
+.contact .subtitle a{
+    color: var(--link-color);
 }
 
 .contact-h2 {
@@ -564,7 +645,23 @@ section specific
     max-width: 100%;
 }
 
-.contact-btn {}
+.contact-btn {
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 32px;
+    font-weight: 600;
+
+    -webkit-transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+	transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.contact-btn:hover {
+    background-color: var(--link-color);
+}
+
+.contact-btn:hover a {
+    color: var(--secondary-color);
+}
 
 /* footer */
 
