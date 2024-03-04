@@ -575,7 +575,9 @@
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init();
+  if (window.innerWidth >= 650) {
+    AOS.init();
+  }
 </script>
     </body>
 </html>
