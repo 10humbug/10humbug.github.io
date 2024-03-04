@@ -19,6 +19,7 @@ reset css
 */
 
 * {
+    box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -76,7 +77,6 @@ global styles
 
 body {
     position: relative;
-    box-sizing: border-box;
     background: var(--bg-color);
     width: 100%;
     height: auto;
