@@ -305,11 +305,19 @@ repeating layout elements
     opacity: 1;
 }
 
-.modal .subtitle {
-    color: var(--bg-color);
-    padding-top: 16px;
+.modal header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
+.modal .subtitle {
+    color: var(--bg-color);
+}
+
+.modal-content {
+    padding-top: 32px;
+}
 .modal-wrapper {
     width: 100%;
     max-width: 1440px;
@@ -323,6 +331,7 @@ repeating layout elements
 }
 
 .close-modal-btn {
+    z-index: 10;
     font-family: futura-pt, sans-serif;
     font-weight: 600;
     position: fixed;
@@ -348,7 +357,7 @@ repeating layout elements
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 16px;
 }
 
 .modal .image-container {
@@ -699,8 +708,8 @@ footer p {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: var(--secondary-color);
   }
   
@@ -807,4 +816,22 @@ footer p {
 
   [data-aos].aos-animate {
     pointer-events: none !important;
+  }
+
+  .modal-content p {
+    color: var(--bg-color-secondary);
+  }
+
+  .modal-content .column {
+    gap: 8px;
+  }
+
+  #portfolio-modal-3 img {
+    margin-top: 8px;
+    border-radius: 16px;
+    object-fit: contain;
+  }
+
+  .modal iframe {
+    margin-top: 8px;
   }
