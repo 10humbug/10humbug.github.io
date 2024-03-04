@@ -575,7 +575,7 @@
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  if (!(/Mobi|Android/i.test(navigator.userAgent))) {
+  if (window.screen.width > 800) {
     AOS.init();
   }
 </script>
