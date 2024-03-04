@@ -80,7 +80,8 @@ body {
     width: 100vw;
     height: auto;
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 main {
