@@ -76,6 +76,7 @@ global styles
 */
 
 body {
+    position: relative;
     background: var(--bg-color);
     width: 100%;
     height: auto;
