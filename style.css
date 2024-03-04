@@ -415,8 +415,9 @@ section specific
     /* Choose desired blend mode */
     background-color: var(--hero-bg-color);
     background-size: 150%;
-    background-position: 70% 40%;
+    background-position: 35% 40%;
     background-repeat: no-repeat;
+    
 }
 
 .hero-overlay {
