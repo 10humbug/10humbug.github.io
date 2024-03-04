@@ -575,7 +575,11 @@
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  if (window.screen.width > 800) {
+    function isMobile() {
+return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+  if (!isMobile()) {
     AOS.init();
   }
 </script>
