@@ -20,7 +20,6 @@ reset css
 
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -80,7 +79,8 @@ body {
     background: var(--bg-color);
     width: 100vw;
     height: auto;
-    overflow: scroll !important;
+    scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 main {

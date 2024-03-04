@@ -40,7 +40,9 @@ Typography changes
     global styles 
     */
 
-
+    body {
+        scroll-behavior: auto;
+    }
 
     /* 
     global styles 
